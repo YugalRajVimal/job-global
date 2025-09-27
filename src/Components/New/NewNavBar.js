@@ -34,7 +34,7 @@ export default function JobGlobalNavbar() {
                 scrolled ? "text-black" : "text-white"
               }`}
             >
-              Job Global
+              KS. Job Global
             </span>
             <span
               className={`text-sm ${

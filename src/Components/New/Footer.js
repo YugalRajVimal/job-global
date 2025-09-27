@@ -21,7 +21,7 @@ const Footer = () => {
               <div className=" p-2 rounded-full">
                 <img src="/logo.jpg" alt="Logo" className="h-16 aspect-[1/1]" />
               </div>
-              <span className="text-xl font-semibold ml-2">Job Global</span>
+              <span className="text-xl font-semibold ml-2">KS. Job Global</span>
             </div>
             <p className="text-gray-600 mb-4">
               Since 2018, Job Global has connecting hospitality workers to

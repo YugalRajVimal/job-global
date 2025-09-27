@@ -7,15 +7,15 @@ export default function AboutUsSection() {
         {/* Left Side: Text */}
         <div className="md:w-1/2">
           <h2 className="text-5xl font-bold text-white mb-4">
-            Life at Job Global
+            Life at KS. Job Global
           </h2>
           <h3 className="text-2xl font-semibold text-white mb-6">
-            Why work at Job Global?
+            Why work at KS. Job Global?
           </h3>
           <p className="text-white text-lg mb-8 leading-relaxed">
-            Job Global is one of the biggest private sector employers globally.
-            With a robust, consistent framework for people management, Job
-            Global maintains an inclusive, progressive, high-performance
+            KS. Job Global is one of the biggest private sector employers
+            globally. With a robust, consistent framework for people management,
+            Job Global maintains an inclusive, progressive, high-performance
             environment, enabling purpose-driven talent with unparalleled access
             to opportunities for growth.
           </p>
