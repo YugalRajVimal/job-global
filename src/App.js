@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/NavBar";
-import HomePage from "./Page/HomePage";
-import Footer from "./Components/Footer";
+import HomePage from "./Page/New/HomePage";
+import OldHomePage from "./Page/Old/HomePage";
+import JobGlobalNavbar from "./Components/New/NewNavBar";
+import Footer from "./Components/New/Footer";
 
 // A simple component for the home page
 const Home = () => {
@@ -34,10 +35,11 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative bg-gray-100 flex flex-col items-center justify-center">
-        <Navbar />
-
+        <JobGlobalNavbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/old" element={<OldHomePage />} />
+
           <Route path="/about" element={<About />} />
           {/* You can add more routes here */}
           {/* Example of a 404 page */}
