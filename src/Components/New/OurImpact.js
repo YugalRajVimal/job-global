@@ -8,7 +8,7 @@ const tabs = [
     heading: "Our Global Impact",
     text: "At Job Global, we are dedicated to empowering lives and bridging opportunities worldwide. We connect talented individuals with industries across hospitality, retail, healthcare, logistics, and more. Through global staffing solutions, we create pathways for employment, uplift communities, and fuel organizational growth.",
     image:
-      "https://images.unsplash.com/photo-1582719478191-6c0f4c21c1dc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "innovation",

@@ -4,6 +4,7 @@ import HomePage from "./Page/New/HomePage";
 import OldHomePage from "./Page/Old/HomePage";
 import JobGlobalNavbar from "./Components/New/NewNavBar";
 import Footer from "./Components/New/Footer";
+import ContactUs from "./Page/New/ContactUsPage";
 
 // A simple component for the home page
 const Home = () => {
@@ -41,6 +42,8 @@ const App = () => {
           <Route path="/old" element={<OldHomePage />} />
 
           <Route path="/about" element={<About />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+
           {/* You can add more routes here */}
           {/* Example of a 404 page */}
           <Route

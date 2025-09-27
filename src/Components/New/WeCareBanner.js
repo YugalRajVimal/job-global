@@ -6,8 +6,11 @@ const JobGlobalWeCare = () => {
       {/* JOB GLOBAL Styled Text */}
       <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-6">
         <span className="inline-block bg-clip-text text-transparent bg-[url('https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center mr-2">
+          KS.
+        </span>{" "}
+        <span className="inline-block bg-clip-text text-transparent bg-[url('https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center mr-2">
           JOB
-        </span>
+        </span>{" "}
         <span className="inline-block bg-clip-text text-transparent bg-[url('https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center">
           GLOBAL
         </span>

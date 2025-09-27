@@ -14,7 +14,7 @@ export default function JobGlobalNavbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 h-[10vh] min-h-[90px] ${
+      className={`fixed top-0 left-0  w-full z-50 transition-all duration-500 h-[10vh] min-h-[90px] ${
         scrolled
           ? "bg-white shadow-md"
           : "bg-gradient-to-b from-black/70 to-transparent"
@@ -23,7 +23,11 @@ export default function JobGlobalNavbar() {
       <div className="flex items-center h-full justify-between px-10 py-2 ">
         {/* Logo */}
         <div className="flex items-center space-x-2 h-full">
-          <img src="/logo.jpg" alt="Job Global Logo" className="h-full aspect-[1/1]" />
+          <img
+            src="/logo.jpg"
+            alt="Job Global Logo"
+            className="h-full aspect-[1/1]"
+          />
           <div className="flex flex-col leading-tight">
             <span
               className={`text-xl font-bold ${
@@ -45,21 +49,21 @@ export default function JobGlobalNavbar() {
         {/* Nav Links */}
         <div className="hidden md:flex space-x-8 text-sm font-medium">
           {[
-            "Home",
-            "About Us",
-            "Services",
-            "Contact Us"
+            { linkText: "Home", link: "/" },
+            { linkText: "About Us", link: "/about-us" },
+            { linkText: "Services", link: "/services" },
+            { linkText: "Contact Us", link: "/contact-us" },
           ].map((item) => (
             <a
-              key={item}
-              href="#"
+              key={item.linkText}
+              href={item.link}
               className={`transition-colors ${
                 scrolled
                   ? "text-gray-800 hover:text-blue-600"
                   : "text-white hover:text-yellow-400"
               }`}
             >
-              {item}
+              {item.linkText}
             </a>
           ))}
         </div>

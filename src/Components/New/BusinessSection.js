@@ -115,7 +115,7 @@ const BusinessSection = () => {
         </div>
 
         {/* Right List */}
-        <div className="flex-1 flex flex-col justify-center px-10 md:px-20">
+        <div className="flex-1 flex flex-col justify-center px-10 md:px-4">
           <ul className="space-y-6 text-xl md:text-2xl font-medium font-serif">
             {data.map((item) => (
               <li
