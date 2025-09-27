@@ -57,7 +57,7 @@ const BusinessSection = () => {
   const [active, setActive] = useState(data[0]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden text-white">
+    <div className="relative w-full h-[100vh] py-10 overflow-hidden text-white">
       {/* Background */}
       <AnimatePresence mode="wait">
         <motion.div

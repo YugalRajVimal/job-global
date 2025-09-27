@@ -36,7 +36,7 @@ const OurImpactSection = () => {
   return (
     <div className="bg-[#003366] text-white py-16 px-6 md:px-20 relative overflow-hidden">
       {/* Top Navigation */}
-      <div className="flex justify-center gap-12 mb-12 text-lg font-medium ">
+      <div className="flex flex-col md:flex-row justify-center gap-12 mb-12 text-lg font-medium ">
         {tabs.map((tab) => (
           <button
             key={tab.id}

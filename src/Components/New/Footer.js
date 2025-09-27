@@ -27,18 +27,6 @@ const Footer = () => {
               Since 2018, Job Global has connecting hospitality workers to
               thousands of business, private events and universities.
             </p>
-            <div className="flex gap-2">
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="App Store"
-                className="h-10"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Google Play"
-                className="h-10"
-              />
-            </div>
           </div>
 
           {/* Links Section */}
@@ -67,11 +55,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">Company</h4>
             <ul className="text-gray-600 space-y-1">
+              <li>Home</li>
               <li>About Us</li>
-              <li>Career</li>
-              <li>Partners</li>
-              <li>Blog</li>
-              <li>Clients</li>
+              <li>Services</li>
+              <li>Contact Us</li>
             </ul>
           </div>
 
