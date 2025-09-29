@@ -12,7 +12,7 @@ export default function JobGlobalHero() {
   }, [images.length]);
 
   return (
-    <div className="w-full">
+    <div className="w-screen overflow-hidden">
       {/* Hero Section */}
       <section
         className="relative h-[85vh] flex items-center justify-start text-left text-white transition-all duration-700 ease-in-out"
