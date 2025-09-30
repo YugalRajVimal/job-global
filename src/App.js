@@ -5,6 +5,8 @@ import OldHomePage from "./Page/Old/HomePage";
 import JobGlobalNavbar from "./Components/New/NewNavBar";
 import Footer from "./Components/New/Footer";
 import ContactUs from "./Page/New/ContactUsPage";
+import AboutUs from "./Page/New/AboutUsPage";
+import Services from "./Page/New/ServicesPage";
 
 // A simple component for the home page
 const Home = () => {
@@ -39,9 +41,10 @@ const App = () => {
         <JobGlobalNavbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/old" element={<OldHomePage />} />
+          {/* <Route path="/old" element={<OldHomePage />} /> */}
 
-          <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/contact-us" element={<ContactUs />} />
 
           {/* You can add more routes here */}

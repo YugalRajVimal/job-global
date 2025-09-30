@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   FaEnvelope,
   FaFacebookF,
@@ -8,77 +9,87 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaTwitter,
-  FaWhatsapp,
   FaWhatsappSquare,
   FaYoutube,
 } from "react-icons/fa";
 
-export default function ContactUs() {
-  // Form states
+export default function ContactUsComp() {
   const [formData, setFormData] = useState({
-    enquiryType: "",
+    fullName: "",
+    fatherName: "",
+    passportNumber: "",
     country: "",
     state: "",
     city: "",
-    firstName: "",
-    lastName: "",
+    phone: "",
     email: "",
-    contact: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const {
-      enquiryType,
+      fullName,
+      fatherName,
+      passportNumber,
       country,
       state,
       city,
-      firstName,
-      lastName,
-      email,
-      contact,
+      phone,
       message,
     } = formData;
 
+    // Validate mandatory fields
     if (
-      !enquiryType ||
+      !fullName ||
+      !fatherName ||
+      !passportNumber ||
       !country ||
       !state ||
       !city ||
-      !firstName ||
-      !lastName ||
-      !email ||
-      !contact ||
+      !phone ||
       !message
     ) {
-      alert("Please fill in all fields.");
+      alert("Please fill in all mandatory fields.");
       return;
     }
 
-    // Build WhatsApp message
-    const text = `New Contact Enquiry:
-• Enquiry Type: ${enquiryType}
-• Country: ${country}
-• State: ${state}
-• City: ${city}
-• Name: ${firstName} ${lastName}
-• Email: ${email}
-• Contact: ${contact}
-• Message: ${message}`;
+    try {
+      setLoading(true);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/send-mail`, formData, {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true, // if your server uses credentials
+      });
 
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/918505811996?text=${encodedText}`;
-
-    window.open(whatsappUrl, "_blank");
+      alert(res.data || "Message sent successfully!");
+      setFormData({
+        fullName: "",
+        fatherName: "",
+        passportNumber: "",
+        country: "",
+        state: "",
+        city: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
-    <section className="bg-white w-full  px-6 py-10 flex flex-col items-center">
+    <section className="bg-white w-full px-6 py-10 flex flex-col items-center">
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
@@ -89,7 +100,7 @@ export default function ContactUs() {
         Contact Us
       </motion.h1>
 
-      <div className="flex flex-col lg:flex-row w-full  mt-4 gap-12">
+      <div className="flex flex-col lg:flex-row w-full mt-4 gap-12">
         {/* Left Panel */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -98,7 +109,6 @@ export default function ContactUs() {
           className="w-full lg:w-1/2"
         >
           <h2 className="text-2xl text-gray-800 mb-3">Get in touch</h2>
-
           <h3 className="text-lg text-blue-700 font-semibold mb-2">
             Corporate office
           </h3>
@@ -112,7 +122,7 @@ export default function ContactUs() {
           {/* Email */}
           <div className="flex items-center gap-2 text-gray-700 mb-2">
             <a
-              href="mailto:info@ril.com"
+              href="mailto:support@ksjobglobal.com"
               className="flex items-center gap-2 text-blue-700 hover:underline"
             >
               <FaEnvelope className="text-lg" />
@@ -120,6 +130,7 @@ export default function ContactUs() {
             </a>
           </div>
 
+          {/* WhatsApp */}
           <div className="flex items-center gap-2 text-gray-700 mb-2">
             <a
               href="https://wa.me/+918505811996?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20KS%20Job%20Global."
@@ -150,7 +161,7 @@ export default function ContactUs() {
               {[
                 { icon: <FaFacebookF />, link: "#" },
                 { icon: <FaInstagram />, link: "#" },
-                { icon: <FaTwitter />, link: "#" }, // Using FaXTwitter for 'x' (formerly Twitter)
+                { icon: <FaTwitter />, link: "#" },
                 { icon: <FaLinkedinIn />, link: "#" },
                 { icon: <FaYoutube />, link: "#" },
               ].map((social, idx) => (
@@ -165,19 +176,6 @@ export default function ContactUs() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Google Map Embed */}
-          <div className="mt-6 rounded-lg overflow-hidden shadow-sm">
-            <iframe
-              title="Reliance Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.791431111736!2d77.42705757578646!3d28.606033185283028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef6165728471%3A0xf027989e066991a4!2sGaur%20City%20Mall!5e0!3m2!1sen!2sin!4v1758978222156!5m2!1sen!2sin"
-              width="100%"
-              height="210"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            />
           </div>
         </motion.div>
 
@@ -194,95 +192,28 @@ export default function ContactUs() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Dropdowns */}
-            <select
-              name="enquiryType"
-              value={formData.enquiryType}
-              onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            >
-              <option value="">Select Enquiry Type*</option>
-              <option value="General">General</option>
-              <option value="Support">Support</option>
-              <option value="Business">Business</option>
-            </select>
-
-            <select
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            >
+            <input name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <input name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father's Name*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <input name="passportNumber" value={formData.passportNumber} onChange={handleChange} placeholder="Passport Number*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <select name="country" value={formData.country} onChange={handleChange} className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none">
               <option value="">Select Country*</option>
               <option value="India">India</option>
               <option value="Other">Other</option>
             </select>
-
-            <select
-              name="state"
-              value={formData.state}
-              onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            >
+            <select name="state" value={formData.state} onChange={handleChange} className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none">
               <option value="">Select State*</option>
               <option value="Uttar Pradesh">Uttar Pradesh</option>
               <option value="Delhi">Delhi</option>
             </select>
-
-            <input
-              name="city"
-              value={formData.city}
-              onChange={handleChange}
-              placeholder="City*"
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            />
-
-            <input
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="First Name*"
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            />
-            <input
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last Name"
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            />
-            <input
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email Id*"
-              type="email"
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            />
-            <input
-              name="contact"
-              value={formData.contact}
-              onChange={handleChange}
-              placeholder="Contact No.*"
-              type="tel"
-              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-            />
+            <input name="city" value={formData.city} onChange={handleChange} placeholder="City*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone No.*" type="tel" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <input name="email" value={formData.email} onChange={handleChange} placeholder="Email Id (Optional)" type="email" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
           </div>
 
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Message"
-            className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
-          ></textarea>
+          <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"></textarea>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            className="bg-[#cfa44d] text-white px-6 py-3 mt-4 font-semibold text-lg rounded hover:opacity-90 transition"
-          >
-            Submit via WhatsApp
+          <button type="submit" disabled={loading} className="bg-[#cfa44d] text-white px-6 py-3 mt-4 font-semibold text-lg rounded hover:opacity-90 transition">
+            {loading ? "Sending..." : "Submit"}
           </button>
         </motion.form>
       </div>
