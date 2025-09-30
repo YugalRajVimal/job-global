@@ -6,6 +6,7 @@ import OurImpactSection from "../../Components/New/OurImpact";
 import AboutUsSection from "../../Components/New/AboutUsSection";
 import AffilatedBy from "../../Components/New/AffiliatedBy";
 import LabourCountries from "../../Components/New/LabourCountries";
+import ContactUs from "../../Components/New/ContactUs";
 
 const HomePage = () => {
   return (
@@ -16,8 +17,8 @@ const HomePage = () => {
       <AboutUsSection />
       <BusinessSection />
       <LabourCountries />
-
       <OurImpactSection />
+      <ContactUs />
     </div>
   );
 };

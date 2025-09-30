@@ -109,9 +109,9 @@ const BusinessSection = () => {
               {active.desc}
             </motion.p>
           </AnimatePresence>
-          <button className="border border-white px-6 py-3 rounded-full w-fit hover:bg-white hover:text-black transition">
-            read more →
-          </button>
+          <a href="/contact-us" className="border border-white px-6 py-3 rounded-full w-fit hover:bg-white hover:text-black transition">
+            Contact Us →
+          </a>
         </div>
 
         {/* Right List */}

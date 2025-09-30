@@ -77,9 +77,9 @@ const OurImpactSection = () => {
                 {currentTab.heading}
               </h2>
               <p className="text-lg leading-relaxed mb-6">{currentTab.text}</p>
-              <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
-                read more →
-              </button>
+              <a href="/contact-us" className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
+                Join Us →
+              </a>
             </motion.div>
           </AnimatePresence>
         </div>

@@ -40,10 +40,10 @@ export default function JobGlobalHero() {
               About Us →
             </a>
             <a
-              href="#history"
+              href="/contact-us"
               className="px-3 py-1 md:px-6 md:py-3 border border-white rounded-full hover:bg-white hover:text-black"
             >
-              Our History
+              Contact Us
             </a>
           </div>
         </div>
