@@ -41,7 +41,7 @@ export default function AboutUs() {
 
       {/* Life at KS. Job Global */}
       <section className="py-20 px-6 md:px-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className=" mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div>
             <h2 className="font-serif text-4xl font-extrabold mb-6 text-gray-900 leading-tight">
@@ -71,16 +71,16 @@ export default function AboutUs() {
           </div>
 
           {/* Image Gallery */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6 ">
             <img
-              src="/team1.jpeg"
-              alt="Job Global Team"
-              className="rounded-xl shadow-lg w-full h-64 sm:h-80 object-cover transform hover:scale-105 transition duration-300 ease-in-out"
+              src="/about1.jpg"
+              alt="Job Global about"
+              className="rounded-xl shadow-lg h-80 object-cover transform hover:scale-105 transition duration-300 ease-in-out"
             />
             <img
-              src="/team2.jpeg"
+              src="/about2.jpg"
               alt="Job Global Staff"
-              className="rounded-xl shadow-lg w-full h-64 sm:h-80 object-cover sm:mt-12 transform hover:scale-105 transition duration-300 ease-in-out"
+              className="rounded-xl shadow-lg h-80 mx-auto object-cover mt-12 transform hover:scale-105 transition duration-300 ease-in-out"
             />
           </div>
         </div>

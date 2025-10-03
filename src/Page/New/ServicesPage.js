@@ -2,7 +2,7 @@ import { Building2, Utensils, Users, Car, Briefcase } from "lucide-react";
 
 export default function Services() {
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="bg-gray-50 text-gray-80 w-full">
       {/* Hero Section */}
       <section
         className="relative pt-28 pb-20 text-center px-4"

@@ -15,3 +15,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: RobotoSlab-Regular;
+  src: url("../public/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+}
+
+.font-RobotoSlab-Regular {
+  font-family: RobotoSlab-Regular;
+}
