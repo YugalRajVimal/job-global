@@ -81,9 +81,9 @@ export default function ContactUs() {
   return (
     <section className="bg-white w-full pt-[100px] min-h-screen px-6 py-10 flex flex-col items-center">
       {/* Breadcrumb */}
-      <div className="w-full  text-sm text-gray-600 mb-6">
+      {/* <div className="w-full  text-sm text-gray-600 mb-6">
         <span>Home &gt; Contact Us</span>
-      </div>
+      </div> */}
 
       {/* Heading */}
       <ContactUsComp />

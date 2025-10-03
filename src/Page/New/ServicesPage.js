@@ -4,33 +4,44 @@ export default function Services() {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Hero Section */}
-      <section className="pt-28 pb-20 text-center bg-white shadow-sm">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Find Your Next <span className="text-blue-600">Career Here</span>
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-8">
-          Explore thousands of jobs and connect with top employers in
-          hospitality, driving, healthcare, retail, and more.
-        </p>
-        <div className="flex justify-center gap-4">
-          <a
-            href="/about-us"
-            className="px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700"
-          >
-            About Us →
-          </a>
-          <a
-            href="/contact-us"
-            className="px-6 py-3 border border-blue-600 text-blue-600 rounded shadow hover:bg-blue-50"
-          >
-            Contact Us
-          </a>
+      <section
+        className="relative pt-28 pb-20 text-center px-4"
+        style={{
+          backgroundImage: `url(/banner2.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+            Our <span className="text-[#d1af75]">Services</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-base sm:text-lg text-white mb-8">
+            We provide tailored staffing and recruitment solutions across
+            hospitality, driving, healthcare, and more — connecting talent with
+            the right opportunities.
+          </p>
+          <div className="flex justify-center gap-4">
+            {/* <a
+              href="/industries"
+              className="px-6 py-3 bg-[#d1af75] text-black rounded shadow hover:bg-yellow-600"
+            >
+              Explore Industries →
+            </a> */}
+            <a
+              href="/contact-us"
+              className="px-6 py-3 bg-[#d1af75] text-black rounded shadow hover:bg-yellow-600"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Services Overview */}
       <section className="py-20 px-6 md:px-20 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="font-serif text-3xl font-bold text-center mb-12">
           Industries Served
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,7 +82,7 @@ export default function Services() {
               className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white"
             >
               <Icon className="h-8 w-8 text-blue-600 mb-3" />
-              <h3 className="text-xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-xl font-semibold mb-2 font-serif">{title}</h3>
               <p className="text-gray-600 text-sm">{desc}</p>
             </div>
           ))}
@@ -80,7 +91,7 @@ export default function Services() {
 
       {/* Global Reach */}
       <section className="py-20 px-6 md:px-20 bg-white">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="font-serif text-3xl font-bold text-center mb-12">
           Our Global Presence
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -103,7 +114,7 @@ export default function Services() {
 
       {/* Impact & Commitment */}
       <section className="py-20 px-6 md:px-20 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="font-serif text-3xl font-bold text-center mb-12">
           Our Global Impact
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -125,7 +136,7 @@ export default function Services() {
               key={title}
               className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white text-center"
             >
-              <h3 className="text-xl font-semibold mb-3">{title}</h3>
+              <h3 className="text-xl font-semibold mb-3 font-serif">{title}</h3>
               <p className="text-gray-600 text-sm">{desc}</p>
             </div>
           ))}

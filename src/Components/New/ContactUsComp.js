@@ -63,10 +63,14 @@ export default function ContactUsComp() {
 
     try {
       setLoading(true);
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/send-mail`, formData, {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true, // if your server uses credentials
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/send-mail`,
+        formData,
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true, // if your server uses credentials
+        }
+      );
 
       alert(res.data || "Message sent successfully!");
       setFormData({
@@ -177,6 +181,22 @@ export default function ContactUsComp() {
               ))}
             </div>
           </div>
+
+          {/* Map */}
+          <div className="mt-6">
+            <div className="text-gray-800 font-medium mb-3">Our Location</div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.814188997582!2d77.42525007592465!3d28.605350585313772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceffedab57a97%3A0xc2547c83859b2c05!2sgaur%20city%20mall!5e0!3m2!1sen!2sin!4v1759469172578!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-md shadow-md"
+              title="Our Location on Google Maps"
+            ></iframe>
+          </div>
         </motion.div>
 
         {/* Right Panel: Contact Form */}
@@ -192,27 +212,85 @@ export default function ContactUsComp() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
-            <input name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father's Name*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
-            <input name="passportNumber" value={formData.passportNumber} onChange={handleChange} placeholder="Passport Number*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
-            <select name="country" value={formData.country} onChange={handleChange} className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none">
+            <input
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder="Full Name*"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
+            <input
+              name="fatherName"
+              value={formData.fatherName}
+              onChange={handleChange}
+              placeholder="Father's Name*"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
+            <input
+              name="passportNumber"
+              value={formData.passportNumber}
+              onChange={handleChange}
+              placeholder="Passport Number*"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
+            <select
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            >
               <option value="">Select Country*</option>
               <option value="India">India</option>
               <option value="Other">Other</option>
             </select>
-            <select name="state" value={formData.state} onChange={handleChange} className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none">
+            <select
+              name="state"
+              value={formData.state}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            >
               <option value="">Select State*</option>
               <option value="Uttar Pradesh">Uttar Pradesh</option>
               <option value="Delhi">Delhi</option>
             </select>
-            <input name="city" value={formData.city} onChange={handleChange} placeholder="City*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
-            <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone No.*" type="tel" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
-            <input name="email" value={formData.email} onChange={handleChange} placeholder="Email Id (Optional)" type="email" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none" />
+            <input
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              placeholder="City*"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
+            <input
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Phone No.*"
+              type="tel"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email Id (Optional)"
+              type="email"
+              className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+            />
           </div>
 
-          <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message*" className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"></textarea>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message*"
+            className="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none"
+          ></textarea>
 
-          <button type="submit" disabled={loading} className="bg-[#cfa44d] text-white px-6 py-3 mt-4 font-semibold text-lg rounded hover:opacity-90 transition">
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-[#cfa44d] text-white px-6 py-3 mt-4 font-semibold text-lg rounded hover:opacity-90 transition"
+          >
             {loading ? "Sending..." : "Submit"}
           </button>
         </motion.form>

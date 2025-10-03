@@ -41,7 +41,7 @@ const OurImpactSection = () => {
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`relative pb-1 transition flex-1 text-xl text-left ${
+            className={`font-serif relative pb-1 transition flex-1 text-xl text-left ${
               active === tab.id ? "text-yellow-400" : "text-gray-200"
             }`}
           >

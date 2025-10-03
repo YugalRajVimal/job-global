@@ -14,10 +14,10 @@ export default function AffilatedBy() {
 
         {/* Text */}
         <div className="text-center md:text-left">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">
+          <h2 className="font-serif text-2xl md:text-4xl font-semibold text-white">
             Affiliated by
           </h2>
-          <p className="text-3xl md:text-5xl font-bold text-white mt-2">
+          <p className="font-serif text-3xl md:text-5xl font-bold text-white mt-2">
             Ministry of External Affairs
           </p>
         </div>

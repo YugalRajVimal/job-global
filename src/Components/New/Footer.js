@@ -18,10 +18,10 @@ const Footer = () => {
           {/* Logo + Description + App Badges */}
           <div className="md:col-span-1 ">
             <div className="flex flex-col items-center mb-4">
-              <div className=" p-2 rounded-full">
-                <img src="/logo.jpg" alt="Logo" className="h-16 aspect-[1/1]" />
+              <div className=" rounded-full ">
+                <img src="/logo.svg" alt="Logo" className="h-24 aspect-[1/1]" />
               </div>
-              <span className="text-xl font-semibold ml-2">KS. Job Global</span>
+              <span className="text-xl font-semibold ml-2 ">KS. Job Global</span>
             </div>
             <p className="text-gray-600 mb-4">
               Since 2018, Job Global has connecting hospitality workers to

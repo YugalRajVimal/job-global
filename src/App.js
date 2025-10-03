@@ -37,7 +37,7 @@ const About = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative bg-gray-100 flex flex-col items-center justify-center">
+      <div className="relative font-sans bg-gray-100 flex flex-col items-center justify-center">
         <JobGlobalNavbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -6,10 +6,10 @@ export default function AboutUsSection() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-8">
         {/* Left Side: Text */}
         <div className="md:w-1/2">
-          <h2 className="text-5xl font-bold text-white mb-4">
+          <h2 className="font-serif text-5xl font-bold text-white mb-4">
             Life at KS. Job Global
           </h2>
-          <h3 className="text-2xl font-semibold text-white mb-6">
+          <h3 className="font-serif text-2xl font-semibold text-white mb-6">
             Why work at KS. Job Global?
           </h3>
           <p className="text-white text-lg mb-8 leading-relaxed">
@@ -22,32 +22,34 @@ export default function AboutUsSection() {
           <div className="flex gap-4"></div>
         </div>
         {/* Right Side: Images and Badge */}
-        <div className="md:w-1/2 flex flex-wrap gap-4 justify-center items-center">
-          <div className="flex flex-col gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=280&q=80"
-              alt="Job Global Employee"
-              className="w-44 h-56 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=140&q=80"
-              alt="Job Global Team"
-              className="w-44 h-28 object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="bg-white rounded-lg shadow-lg flex items-center justify-center w-44 h-28">
+        <div className="w-full md:w-1/2">
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Left Column of Images */}
+            <div className="flex flex-col gap-4 w-full sm:w-1/2">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/2/25/Great_Place_to_Work_logo.png"
-                alt="Great Place To Work"
-                className="h-16"
+                src="/img1.jpg"
+                alt="Job Global Employee"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img
+                src="/img2.jpg"
+                alt="Job Global Team"
+                className="w-full h-40 object-cover rounded-lg shadow-lg"
               />
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=facearea&w=140&q=80"
-              alt="Job Global Staff"
-              className="w-44 h-28 object-cover rounded-lg shadow-lg"
-            />
+            {/* Right Column of Images, slightly offset */}
+            <div className="flex flex-col gap-4 w-full sm:w-1/2 sm:mt-8">
+              <img
+                src="/img4.jpeg"
+                alt="Great Place To Work"
+                className="w-full h-40 object-cover rounded-lg shadow-lg"
+              />
+              <img
+                src="/img3.jpg"
+                alt="Job Global Staff"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>

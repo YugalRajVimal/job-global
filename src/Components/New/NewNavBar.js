@@ -32,7 +32,7 @@ export default function JobGlobalNavbar() {
         {/* Logo */}
         <div className="flex items-center space-x-2 h-full">
           <img
-            src="/logo.jpg"
+            src="/logo.svg"
             alt="Job Global Logo"
             className="h-full aspect-[1/1]"
           />

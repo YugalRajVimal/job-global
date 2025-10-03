@@ -11,7 +11,7 @@ export default function LabourCountries() {
   return (
     <section className="bg-[#d1af75] py-12">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
           We Provide Labour to International Companies
         </h2>
         <p className="text-white/90 text-lg mb-10">
