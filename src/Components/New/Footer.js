@@ -33,43 +33,42 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">For Workers</h4>
             <ul className="text-gray-600 space-y-1">
-              <li>Find Work</li>
-              <li>Jobs in Dubai</li>
-              <li>Jobs in Russia</li>
-              <li>Jobs in Europe</li>
-              <li>Jobs in Neitherlands</li>
+              <li><a href="/contact-us" className="hover:underline">Find Work</a></li>
+              <li><a href="/contact-us" className="hover:underline">Jobs in Dubai</a></li>
+              <li><a href="/contact-us" className="hover:underline">Jobs in Russia</a></li>
+              <li><a href="/contact-us" className="hover:underline">Jobs in Europe</a></li>
+              <li><a href="/contact-us" className="hover:underline">Jobs in Neitherlands</a></li>
+              <li><a href="/contact-us" className="hover:underline">Contact Us</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">For Business</h4>
             <ul className="text-gray-600 space-y-1">
-              <li>Merchandising</li>
-              <li>Hospitality Staff</li>
-              <li>General Labour</li>
-              <li>Car Drivers</li>
-              <li>Bus Driver</li>
+              <li><a href="/contact-us" className="hover:underline">Merchandising</a></li>
+              <li><a href="/contact-us" className="hover:underline">Hospitality Staff</a></li>
+              <li><a href="/contact-us" className="hover:underline">General Labour</a></li>
+              <li><a href="/contact-us" className="hover:underline">Car Drivers</a></li>
+              <li><a href="/contact-us" className="hover:underline">Bus Driver</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">Company</h4>
             <ul className="text-gray-600 space-y-1">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Contact Us</li>
+              <li><a href="/" className="hover:underline">Home</a></li>
+              <li><a href="/about-us" className="hover:underline">About Us</a></li>
+              <li><a href="/services" className="hover:underline">Services</a></li>
+              <li><a href="/contact-us" className="hover:underline">Contact Us</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">Help & Support</h4>
             <ul className="text-gray-600 space-y-1">
-              <li>Contact Us</li>
-              <li>General FAQ</li>
-              <li>Support Center</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
+              <li><a href="/contact-us" className="hover:underline">Contact Us</a></li>
+              <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" className="hover:underline">Terms & Conditions</a></li>
             </ul>
           </div>
         </div>

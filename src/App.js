@@ -7,6 +7,8 @@ import Footer from "./Components/New/Footer";
 import ContactUs from "./Page/New/ContactUsPage";
 import AboutUs from "./Page/New/AboutUsPage";
 import Services from "./Page/New/ServicesPage";
+import PrivacyPolicy from "./Components/New/PrivacyPolicy";
+import TermsAndConditions from "./Components/New/TermsAndConditions";
 
 // A simple component for the home page
 const Home = () => {
@@ -46,6 +48,10 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact-us" element={<ContactUs />} />
+     
+
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
           {/* You can add more routes here */}
           {/* Example of a 404 page */}
