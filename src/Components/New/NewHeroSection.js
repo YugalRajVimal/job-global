@@ -34,7 +34,7 @@ export default function JobGlobalHero() {
           <div className="w-[300px] h-1 bg-[#d1af75] my-6"></div>
           <div className="flex justify-start space-x-4">
             <a
-              href="#about"
+              href="/about-us"
               className="px-3 py-1 md:px-6 md:py-3 bg-[#d1af75] text-black font-semibold rounded-full shadow hover:bg-yellow-600"
             >
               About Us →
