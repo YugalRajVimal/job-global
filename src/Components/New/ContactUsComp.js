@@ -135,7 +135,7 @@ export default function ContactUsComp() {
           </div>
 
           {/* WhatsApp */}
-          <div className="flex items-center gap-2 text-gray-700 mb-2">
+          {/* <div className="flex items-center gap-2 text-gray-700 mb-2">
             <a
               href="https://wa.me/+918505811996?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20KS%20Job%20Global."
               className="flex items-center gap-2 text-blue-700 hover:underline"
@@ -143,10 +143,10 @@ export default function ContactUsComp() {
               <FaWhatsappSquare className="text-xl" />
               <span>+91 85058 11996</span>
             </a>
-          </div>
+          </div> */}
 
           {/* Phone */}
-          <div className="flex items-center gap-2 text-gray-700 mb-6">
+          {/* <div className="flex items-center gap-2 text-gray-700 mb-6">
             <a
               href="tel:+918505811997"
               className="flex items-center gap-2 text-blue-700 hover:underline"
@@ -154,7 +154,7 @@ export default function ContactUsComp() {
               <FaPhone className="text-lg rotate-[90deg]" />
               <span>+91 85058 11997</span>
             </a>
-          </div>
+          </div> */}
 
           {/* Social Media */}
           <div>

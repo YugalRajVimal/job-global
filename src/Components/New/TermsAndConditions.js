@@ -36,7 +36,7 @@ const TermsAndConditions = () => {
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">7. Contact Us</h2>
       <p className="mb-1">📍 Gaur City Mall, Office 9111, Noida West</p>
-      <p className="mb-1">📞 +91 85058 11996 / +91 85058 11997</p>
+      {/* <p className="mb-1">📞 +91 85058 11996 / +91 85058 11997</p> */}
       <p>✉️ <a href="mailto:support@ksjobglobal.com" className="text-blue-600 underline">support@ksjobglobal.com</a></p>
     </div>
   );
